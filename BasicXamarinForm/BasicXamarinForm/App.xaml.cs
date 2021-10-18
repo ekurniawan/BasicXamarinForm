@@ -10,7 +10,7 @@ namespace BasicXamarinForm
         {
             InitializeComponent();
 
-            MainPage = new GridPage();
+            MainPage = new SimpleBinding();
         }
 
         protected override void OnStart()

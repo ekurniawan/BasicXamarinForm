@@ -34,7 +34,7 @@
                 <Label Text="Label didalam frame" HorizontalOptions="Center"
                        VerticalOptions="Center" FontSize="Medium" />
             </Frame>
-            <Image x:Name="myImage" Aspect="AspectFit" HorizontalOptions="Center"
+            <Image x:Name="myImage" Aspect="AspectFit" WidthRequest="80" HorizontalOptions="Center"
                    VerticalOptions="Center"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
         </Grid>
     </ContentPage.Content>

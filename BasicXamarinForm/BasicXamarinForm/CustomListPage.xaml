@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BasicXamarinForm.CustomListPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvData" HasUnevenRows="True" ItemTapped="lvData_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding PicUrl}" WidthRequest="200" Grid.Column="0" Grid.Row="0"
+                                       Grid.RowSpan="3" VerticalOptions="Center" HorizontalOptions="Center" />
+                                <StackLayout Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" >
+                                    <Label  FontSize="Medium" FontAttributes="Bold" 
+                                        VerticalTextAlignment="Center"
+                                       Text="{Binding Title}" />
+                                    <Label   VerticalTextAlignment="Center"
+                                       Text="{Binding Description}"/>
+                                    <Label  VerticalTextAlignment="Center"
+                                       Text="{Binding Price,StringFormat='Price: Rp.{0:F0}'}"/>
+                                </StackLayout>
+                                
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

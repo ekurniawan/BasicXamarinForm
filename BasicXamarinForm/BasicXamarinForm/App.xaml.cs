@@ -10,7 +10,7 @@ namespace BasicXamarinForm
         {
             InitializeComponent();
 
-            MainPage = new SimpleBinding();
+            MainPage = new CustomListPage();
         }
 
         protected override void OnStart()

@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BasicXamarinForm.MainPage">
+             x:Class="BasicXamarinForm.MainPage" Title="Main Form">
 
     <StackLayout>
         <StackLayout>
             <Label x:Name="lblNama" Text="First Name" />
             <Entry x:Name="txtNama" Placeholder="insert name" />
             <Button x:Name="btnShow" Text="Show" Clicked="btnShow_Clicked" />
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnCustomList" Text="Custom List" Clicked="btnCustomList_Clicked" />
+            </StackLayout>
         </StackLayout>
     </StackLayout>
 </ContentPage>

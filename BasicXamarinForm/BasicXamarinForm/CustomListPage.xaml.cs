@@ -37,5 +37,10 @@ namespace BasicXamarinForm
             var item = (ListItem)e.Item;
             DisplayAlert("Selected ITem", $"You select {item.Title} - {item.Price}", "OK");
         }
+
+        private async void btnSimpleList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SimpleBinding());
+        }
     }
 }

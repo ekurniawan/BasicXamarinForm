@@ -35,5 +35,10 @@ namespace BasicXamarinForm
             DisplayAlert("Selected Item", $"Anda memilih {item.Title}", "OK");
             ((ListView)sender).SelectedItem = null;
         }
+
+        private async void btnBack_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
     }
 }

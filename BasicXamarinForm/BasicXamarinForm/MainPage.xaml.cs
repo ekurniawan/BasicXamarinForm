@@ -20,5 +20,10 @@ namespace BasicXamarinForm
             DisplayAlert("Keterangan", $"Nama anda: {txtNama.Text}",
                 "OK");
         }
+
+        private async void btnCustomList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CustomListPage());
+        }
     }
 }

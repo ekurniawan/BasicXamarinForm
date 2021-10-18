@@ -8,6 +8,9 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
@@ -20,7 +23,19 @@
             <Label FontSize="Medium" Grid.Column="0" Grid.Row="1" 
                    Text="Last Name :" HorizontalTextAlignment="End" />
             <Entry Grid.Column="1" Grid.Row="1" Placeholder="Last Name" />
-            <Button Grid.Column="1" Grid.Row="2" Text="Submit" />
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" 
+                         x:Name="myStackLayout" IsVisible="false"  Orientation="Horizontal">
+                <Button Text="My Button" />
+            </StackLayout>
+            <Button Grid.Column="1" Grid.Row="3" Text="Submit" Clicked="Button_Clicked" />
+            <Frame BorderColor="Red" 
+                   CornerRadius="3" Grid.Row="4" HasShadow="True" Margin="20" 
+                   Grid.Column="0" Grid.ColumnSpan="2">
+                <Label Text="Label didalam frame" HorizontalOptions="Center"
+                       VerticalOptions="Center" FontSize="Medium" />
+            </Frame>
+            <Image x:Name="myImage" Aspect="AspectFit" HorizontalOptions="Center"
+                   VerticalOptions="Center"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,18 @@ namespace BasicXamarinForm
         public GridPage()
         {
             InitializeComponent();
+            /*myImage.Source = 
+                ImageSource.FromFile(Path.Combine("images", "monyet1.png"));*/
+            myImage.Source = ImageSource.FromUri(
+                new Uri("https://i0.wp.com/blog.mzikmund.com/wp-content/uploads/2019/02/microsoft-xamirin-1.jpg"));
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            if (myStackLayout.IsVisible)
+                myStackLayout.IsVisible = false;
+            else
+                myStackLayout.IsVisible = true;
         }
     }
 }

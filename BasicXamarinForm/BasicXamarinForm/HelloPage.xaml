@@ -6,12 +6,21 @@
         <StackLayout>
             <Label x:Name="lblHello" Text="Welcome to Xamarin.Forms!" />
             <Button x:Name="btnHello" Text="Hello" />
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Button1"></Button>
-                <Button Text="Button1"></Button>
-                <Button Text="Button1"></Button>
-                <Button Text="Button1"></Button>
-            </StackLayout>
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Button1"></Button>
+                    <Button Text="Button1"></Button>
+                    <Button Text="Button1"></Button>
+                    <Button Text="Button1"></Button>
+                    <Button Text="Button1"></Button>
+                    <Button Text="Button1"></Button>
+                    <Button Text="Button1"></Button>
+                    <Button Text="Button1"></Button>
+                    <Button Text="Button1"></Button>
+                    <Button Text="Button1"></Button>
+                </StackLayout>
+            </ScrollView>
+           
             <Button Text="Button2" />
         </StackLayout>
     </ContentPage.Content>

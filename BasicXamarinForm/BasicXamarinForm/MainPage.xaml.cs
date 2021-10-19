@@ -34,5 +34,11 @@ namespace BasicXamarinForm
         {
             await Navigation.PushAsync(new SimpleBinding());
         }
+
+        private async void btnGlobal_Clicked(object sender, EventArgs e)
+        {
+            Global.Instance.Username = txtNama.Text;
+            await Navigation.PushAsync(new GridPage());
+        }
     }
 }

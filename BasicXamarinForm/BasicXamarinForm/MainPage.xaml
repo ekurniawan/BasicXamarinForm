@@ -17,6 +17,7 @@
             <Button x:Name="btnShow" Text="Show" Clicked="btnShow_Clicked" />
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="btnCustomList" Text="Custom List" Clicked="btnCustomList_Clicked" />
+                <Button x:Name="btnGlobal" Text="Simpan Nilai" Clicked="btnGlobal_Clicked" />
             </StackLayout>
         </StackLayout>
     </StackLayout>

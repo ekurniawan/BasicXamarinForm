@@ -42,5 +42,13 @@ namespace BasicXamarinForm
             else
                 myStackLayout.IsVisible = true;
         }
+
+        private void btnGlobal_Clicked(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(Global.Instance.Username))
+            {
+                DisplayAlert("Keterangan", $"Data Username: {Global.Instance.Username}","OK");
+            }
+        }
     }
 }

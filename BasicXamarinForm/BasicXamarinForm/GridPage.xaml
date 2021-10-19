@@ -27,7 +27,8 @@
                          x:Name="myStackLayout" IsVisible="false"  Orientation="Horizontal">
                 <Button Text="My Button" />
             </StackLayout>
-            <Button Grid.Column="1" Grid.Row="3" Text="Submit" Clicked="Button_Clicked" />
+            <Button x:Name="btnGlobal" Grid.Column="1" Grid.Row="3" Text="Get Data Global"
+                    Clicked="btnGlobal_Clicked"/>
             <Frame BorderColor="Red" 
                    CornerRadius="3" Grid.Row="4" HasShadow="True" Margin="20" 
                    Grid.Column="0" Grid.ColumnSpan="2">

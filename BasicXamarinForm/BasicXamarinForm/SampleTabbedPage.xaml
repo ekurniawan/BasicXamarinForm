@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BasicXamarinForm.SampleTabbedPage">
+             x:Class="BasicXamarinForm.SampleTabbedPage" Title="Main Page"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:local="clr-namespace:BasicXamarinForm">
   <!--Pages can be added as references or inline-->
-    <ContentPage Title="Tab 1">
-        <Label Text="Judul Tab 1" FontSize="Medium" />
-        
-    </ContentPage>
-    <ContentPage Title="Tab 2">
-        <Label Text="Judul Tab 2" FontSize="Medium" />
-    </ContentPage>
-  <ContentPage Title="Tab 3" />
+    <TabbedPage.Children>
+        <local:CustomListPage Title="Custom List" IconImageSource="ic_launcher.png" />
+        <local:SimpleBinding Title="Simple List" IconImageSource="ic_launcher.png" />
+        <local:GridPage Title="Grid" IconImageSource="ic_launcher.png" />
+    </TabbedPage.Children>
 </TabbedPage>

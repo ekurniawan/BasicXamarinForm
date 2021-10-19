@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -41,6 +41,33 @@ namespace BasicXamarinForm
         private async void btnSimpleList_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SimpleBinding());
+        }
+
+        private async void btnAmbilPreferences_Clicked(object sender, EventArgs e)
+        {
+            if (Preferences.ContainsKey("username"))
+            {
+                await DisplayAlert("Keterangan",
+                    $"Data Username: {Preferences.Get("username", string.Empty)}", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Keterangan", $"Preferences Username tidak ditemukan","OK");
+            }
+        }
+
+        private async void btnDeletePreferences_Clicked(object sender, EventArgs e)
+        {
+            if (Preferences.ContainsKey("username"))
+            {
+                Preferences.Remove("username");
+                Preferences.Clear();
+                await DisplayAlert("Keterangan", "Preferences sudah terhapus", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Keterangan", $"Preferences Username tidak ditemukan", "OK");
+            }
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace BasicXamarinForm
 {
@@ -39,6 +40,17 @@ namespace BasicXamarinForm
         {
             Global.Instance.Username = txtNama.Text;
             await Navigation.PushAsync(new GridPage());
+        }
+
+        private async void btnPreference_Clicked(object sender, EventArgs e)
+        {
+            Preferences.Set("username", txtNama.Text);
+            await DisplayAlert("Keterangan", "Preferences username berhasil dibuat", "OK");
+        }
+
+        private void btnPreferenceJson_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

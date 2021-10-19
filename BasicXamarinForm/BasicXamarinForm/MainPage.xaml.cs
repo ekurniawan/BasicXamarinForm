@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using BasicXamarinForm.Models;
+using Newtonsoft.Json;
 
 namespace BasicXamarinForm
 {
@@ -48,9 +50,20 @@ namespace BasicXamarinForm
             await DisplayAlert("Keterangan", "Preferences username berhasil dibuat", "OK");
         }
 
-        private void btnPreferenceJson_Clicked(object sender, EventArgs e)
+        private async void btnPreferenceJson_Clicked(object sender, EventArgs e)
         {
+            var kon = new Konfigurasi
+            {
+                username = txtNama.Text,
+                token = "111222333",
+                expirationdate = DateTime.Now,
+                brightnes = 70
+            };
 
+            //serialisasi class
+            var strKon = JsonConvert.SerializeObject(kon);
+            Preferences.Set("konfigurasi", strKon);
+            await DisplayAlert("Keterangan", "Preferences Json berhasil disimpan","OK");
         }
     }
 }

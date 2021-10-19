@@ -1,4 +1,5 @@
 ﻿using BasicXamarinForm.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,6 +68,23 @@ namespace BasicXamarinForm
             else
             {
                 await DisplayAlert("Keterangan", $"Preferences Username tidak ditemukan", "OK");
+            }
+        }
+
+        private async void btnPrefJson_Clicked(object sender, EventArgs e)
+        {
+            if (Preferences.ContainsKey("konfigurasi"))
+            {
+                var data = Preferences.Get("konfigurasi", string.Empty);
+                if (!string.IsNullOrEmpty(data)) {
+                    var kon = JsonConvert.DeserializeObject<Konfigurasi>(data);
+                    await DisplayAlert("Keterangan",
+                        $"{kon.username} - {kon.token} - {kon.expirationdate.ToShortDateString()} - {kon.brightnes}", "OK");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Keterangan", "Preferences Username tidak ditemukan", "OK");
             }
         }
     }

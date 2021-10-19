@@ -10,6 +10,9 @@
                 <Button x:Name="btnAmbilPreferences" Text="Ambil Preferences" Clicked="btnAmbilPreferences_Clicked" />
                 <Button x:Name="btnDeletePreferences" Text="Delete Preferences" Clicked="btnDeletePreferences_Clicked" />
             </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnPrefJson" Text="Get Json Data" Clicked="btnPrefJson_Clicked" />
+            </StackLayout>
             <ListView x:Name="lvData" HasUnevenRows="True" ItemTapped="lvData_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>

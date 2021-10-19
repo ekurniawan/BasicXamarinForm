@@ -19,10 +19,10 @@
 
             <Label FontSize="Medium" VerticalTextAlignment="Center" Grid.Column="0" Grid.Row="0"
                    Text="First Name :" HorizontalTextAlignment="End" />
-            <Entry Grid.Column="1" Grid.Row="0" Placeholder="first name" />
+            <Entry x:Name="txtFirstName" Grid.Column="1" Grid.Row="0" Placeholder="first name" />
             <Label FontSize="Medium" Grid.Column="0" Grid.Row="1" 
                    Text="Last Name :" HorizontalTextAlignment="End" />
-            <Entry Grid.Column="1" Grid.Row="1" Placeholder="Last Name" />
+            <Entry x:Name="txtLastName" Grid.Column="1" Grid.Row="1" Placeholder="Last Name" />
             <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" 
                          x:Name="myStackLayout" IsVisible="false"  Orientation="Horizontal">
                 <Button Text="My Button" />

@@ -22,6 +22,19 @@ namespace BasicXamarinForm
                 new Uri("https://i0.wp.com/blog.mzikmund.com/wp-content/uploads/2019/02/microsoft-xamirin-1.jpg"));
         }
 
+        private string _nama;
+        public GridPage(string nama)
+        {
+            InitializeComponent();
+            myImage.Source = ImageSource.FromUri(
+                new Uri("https://i0.wp.com/blog.mzikmund.com/wp-content/uploads/2019/02/microsoft-xamirin-1.jpg"));
+            _nama = nama;
+
+            var arrNama = _nama.Split(' ');
+            txtFirstName.Text = arrNama[0];
+            txtLastName.Text = arrNama[1];
+        }
+
         private void Button_Clicked(object sender, EventArgs e)
         {
             if (myStackLayout.IsVisible)

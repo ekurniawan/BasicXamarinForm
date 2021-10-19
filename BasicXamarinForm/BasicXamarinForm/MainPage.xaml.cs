@@ -15,10 +15,9 @@ namespace BasicXamarinForm
             InitializeComponent();
         }
 
-        private void btnShow_Clicked(object sender, EventArgs e)
+        private async void btnShow_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Keterangan", $"Nama anda: {txtNama.Text}",
-                "OK");
+            await Navigation.PushAsync(new GridPage(txtNama.Text));
         }
 
         private async void btnCustomList_Clicked(object sender, EventArgs e)

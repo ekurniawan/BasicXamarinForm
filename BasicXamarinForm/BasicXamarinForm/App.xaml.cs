@@ -9,7 +9,7 @@ namespace BasicXamarinForm
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new SampleTabbedPage());
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

@@ -2,7 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BasicXamarinForm.MainPage" Title="Main Form">
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="menuCustomIcon" Text="Custom List" Order="Primary"
+                     IconImageSource="ic_launcher.png" Clicked="menuCustomList_Clicked" />
+        <ToolbarItem x:Name="menuCustomList" Text="Custom List" Order="Secondary" 
+                     Clicked="menuCustomList_Clicked" />
+        <ToolbarItem x:Name="menuSimpleList" Text="Simple List" Order="Secondary"
+                     Clicked="menuSimpleList_Clicked" />
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <StackLayout>
             <Label x:Name="lblNama" Text="First Name" />

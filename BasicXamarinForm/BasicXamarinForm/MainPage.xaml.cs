@@ -25,5 +25,15 @@ namespace BasicXamarinForm
         {
             await Navigation.PushAsync(new CustomListPage());
         }
+
+        private async void menuCustomList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CustomListPage());
+        }
+
+        private async void menuSimpleList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SimpleBinding());
+        }
     }
 }
